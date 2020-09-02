@@ -17,7 +17,6 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.movies = this.movieService.getMovies();
-    console.log(this.movies);
   }
 
 }

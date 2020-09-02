@@ -1,3 +1,4 @@
+import { MovieHighlightDirective } from './../shared/movie-highlight.directive';
 import { HeaderComponent } from './../shared/header/header.component';
 import { ListComponent } from './list/list.component';
 import { HomepageViewComponent } from './homepage-view.component';
@@ -8,7 +9,8 @@ import { CommonModule } from '@angular/common';
   declarations: [
     HeaderComponent,
     HomepageViewComponent,
-    ListComponent
+    ListComponent,
+    MovieHighlightDirective
   ],
   imports: [
     CommonModule
