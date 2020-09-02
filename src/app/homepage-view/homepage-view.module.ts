@@ -1,3 +1,4 @@
+import { FavoriteDirectorPipe } from './../shared/favorite-director.pipe';
 import { MovieHighlightDirective } from './../shared/movie-highlight.directive';
 import { HeaderComponent } from './../shared/header/header.component';
 import { ListComponent } from './list/list.component';
@@ -10,7 +11,8 @@ import { CommonModule } from '@angular/common';
     HeaderComponent,
     HomepageViewComponent,
     ListComponent,
-    MovieHighlightDirective
+    MovieHighlightDirective,
+    FavoriteDirectorPipe
   ],
   imports: [
     CommonModule
