@@ -1,3 +1,5 @@
+import { Movie } from './../../interfaces/movie';
+import { MovieService } from './../../services/movie.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  movies: Movie[];
+
+  constructor(
+    private readonly movieService: MovieService
+  ) { }
 
   ngOnInit(): void {
+    this.movies = this.movieService.getMovies();
+    console.log(this.movies);
   }
 
 }
