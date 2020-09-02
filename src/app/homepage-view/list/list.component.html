@@ -1,6 +1,4 @@
 <p>Liste de films</p>
 <ul>
-  <li *ngFor="let movie of movies">
-    <span appMovieHighlight>{{ movie.title }}</span> - <span>{{ movie.director | favoriteDirector: 'Christopher Nolan' }}</span>
-  </li>
+  <app-movie *ngFor="let movie of movies" [model]="movie" (liked)="movieLiked($event)"></app-movie>
 </ul>

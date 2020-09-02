@@ -5,6 +5,7 @@ import { ListComponent } from './list/list.component';
 import { HomepageViewComponent } from './homepage-view.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MovieComponent } from './list/movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { CommonModule } from '@angular/common';
     HomepageViewComponent,
     ListComponent,
     MovieHighlightDirective,
-    FavoriteDirectorPipe
+    FavoriteDirectorPipe,
+    MovieComponent
   ],
   imports: [
     CommonModule
