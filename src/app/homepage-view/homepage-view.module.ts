@@ -1,15 +1,17 @@
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { HeaderModule } from './../shared/header/header.module';
 import { FavoriteDirectorPipe } from './../shared/favorite-director.pipe';
 import { MovieHighlightDirective } from './../shared/movie-highlight.directive';
-import { HeaderComponent } from './../shared/header/header.component';
 import { ListComponent } from './list/list.component';
 import { HomepageViewComponent } from './homepage-view.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MovieComponent } from './list/movie/movie.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
     HomepageViewComponent,
     ListComponent,
     MovieHighlightDirective,
@@ -17,7 +19,11 @@ import { MovieComponent } from './list/movie/movie.component';
     MovieComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HeaderModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     HomepageViewComponent

@@ -1,4 +1,2 @@
-<p>Liste de films</p>
-<ul>
-  <app-movie *ngFor="let movie of movies" [model]="movie" (liked)="movieLiked($event)"></app-movie>
-</ul>
+<h1>Liste de films</h1>
+<app-movie *ngFor="let movie of movies" [model]="movie" (liked)="movieLiked($event)"></app-movie>
