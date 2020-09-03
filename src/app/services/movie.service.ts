@@ -3,29 +3,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const MOVIES: Movie[] = [
-  {
-    id: '1',
-    title: 'Interstellar',
-    director: 'Christopher Nolan'
-  },
-  {
-    id: '2',
-    title: 'Joker',
-    director: 'Todd Phillips'
-  },
-  {
-    id: '3',
-    title: 'Black Panther',
-    director: 'Ryan Coogler'
-  },
-  {
-    id: '4',
-    title: 'Inception',
-    director: 'Christopher Nolan'
-  }
-];
-
 @Injectable({
   providedIn: 'root'
 })

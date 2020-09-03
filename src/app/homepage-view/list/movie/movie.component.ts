@@ -9,7 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class MovieComponent implements OnInit {
 
   @Input() model: Movie;
-  @Output() liked: EventEmitter<Movie> = new EventEmitter();
+  @Output() delete: EventEmitter<Movie> = new EventEmitter();
   movie: Movie;
 
   constructor() { }
@@ -19,7 +19,7 @@ export class MovieComponent implements OnInit {
   }
 
   onClick(): void {
-    this.liked.emit(this.movie);
+    this.delete.emit(this.movie);
   }
 
 }

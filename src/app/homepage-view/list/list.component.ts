@@ -21,8 +21,10 @@ export class ListComponent implements OnInit {
     });
   }
 
-  movieLiked(movie: Movie): void {
-    console.log(movie);
+  deleteMovie(movie: Movie): void {
+    this.movieService.deleteMovie(movie.id).subscribe(() => {
+      console.log('DELETE');
+    });
   }
 
 }
