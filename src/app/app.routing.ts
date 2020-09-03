@@ -8,7 +8,7 @@ export const routes: Routes = [
     component: HomepageViewComponent
   },
   {
-    path: 'edit',
+    path: 'edit/:id',
     component: EditViewComponent
   }
 ];

@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderModule } from './../shared/header/header.module';
@@ -23,7 +24,8 @@ import { MatCardModule } from '@angular/material/card';
     HeaderModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ],
   exports: [
     HomepageViewComponent
