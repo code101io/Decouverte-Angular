@@ -16,7 +16,9 @@ export class ListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.movies = this.movieService.getMovies();
+    this.movieService.getMovies().subscribe((movies: Movie[]) => {
+      this.movies = movies;
+    });
   }
 
   movieLiked(movie: Movie): void {

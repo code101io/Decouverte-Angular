@@ -1,5 +1,7 @@
 import { Movie } from './../interfaces/movie';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 const MOVIES: Movie[] = [
   {
@@ -29,13 +31,27 @@ const MOVIES: Movie[] = [
 })
 export class MovieService {
 
-  constructor() { }
+  constructor(
+    private readonly httpClient: HttpClient
+  ) { }
 
-  getMovies(): Movie[] {
-    return MOVIES;
+  getMovies(): Observable<Movie[]> {
+    return this.httpClient.get<Movie[]>('/api/movies');
   }
 
-  getMovie(id: string): Movie {
-    return MOVIES.find((movie: Movie) => movie.id === id);
+  getMovie(id: string): Observable<Movie> {
+    return this.httpClient.get<Movie>(`/api/movies/${id}`);
+  }
+
+  createMovie(movie: Movie): Observable<Movie> {
+    return this.httpClient.post<Movie>('/api/movies', movie);
+  }
+
+  updateMovie(movie: Movie): Observable<Movie> {
+    return this.httpClient.put<Movie>(`/api/movies/${movie.id}`, movie);
+  }
+
+  deleteMovie(id: string): Observable<void> {
+    return this.httpClient.delete<void>(`/api/movies/${id}`);
   }
 }
