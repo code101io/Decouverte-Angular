@@ -1,15 +1,15 @@
-import { Movie } from './../interfaces/movie';
-import { MovieService } from './../services/movie.service';
+import { switchMap } from 'rxjs/operators';
+import { MovieService } from './../../services/movie.service';
+import { Movie } from './../../interfaces/movie';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-edit-view',
-  templateUrl: './edit-view.component.html',
-  styleUrls: ['./edit-view.component.scss']
+  selector: 'app-movie-edit',
+  templateUrl: './movie-edit.component.html',
+  styleUrls: ['./movie-edit.component.scss']
 })
-export class EditViewComponent implements OnInit {
+export class MovieEditComponent implements OnInit {
 
   movie: Movie;
 

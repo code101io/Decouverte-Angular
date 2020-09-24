@@ -1,5 +1,5 @@
+import { HeaderModule } from './shared/header/header.module';
 import { routes } from './app.routing';
-import { EditViewModule } from './edit-view/edit-view.module';
 import { HomepageViewModule } from './homepage-view/homepage-view.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -15,11 +15,11 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
+    HeaderModule,
     HomepageViewModule,
-    EditViewModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes)
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderModule } from './../shared/header/header.module';
@@ -11,6 +11,13 @@ import { CommonModule } from '@angular/common';
 import { MovieComponent } from './list/movie/movie.component';
 import { MatCardModule } from '@angular/material/card';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: HomepageViewComponent
+  }
+];
+
 @NgModule({
   declarations: [
     HomepageViewComponent,
@@ -21,11 +28,10 @@ import { MatCardModule } from '@angular/material/card';
   ],
   imports: [
     CommonModule,
-    HeaderModule,
+    RouterModule.forChild(routes),
     MatCardModule,
     MatButtonModule,
-    MatIconModule,
-    RouterModule
+    MatIconModule
   ],
   exports: [
     HomepageViewComponent
