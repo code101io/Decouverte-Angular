@@ -1,6 +1,13 @@
 <mat-card>
-  <mat-card-title>Add movie</mat-card-title>
+  <mat-card-title>Add movie<span *ngIf="title">: {{ title }}</span></mat-card-title>
   <mat-card-content>
-    <p>TODO: Ajouter un formulaire</p>
+    <form (ngSubmit)="onSubmit()">
+      <label for="title">Title</label>
+      <input type="text" name="title" [(ngModel)]="title">
+      <label for="director">Director</label>
+      <input type="text" name="director" [(ngModel)]="director">
+      <button type="submit">Submit</button>
+    </form>
+    <p *ngIf="isCreated">Movie created</p>
   </mat-card-content>
 </mat-card>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MovieAddComponent } from './movie-add.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   exports: [MovieAddComponent]
 })
