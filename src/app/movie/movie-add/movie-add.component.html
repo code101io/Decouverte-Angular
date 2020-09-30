@@ -1,13 +1,22 @@
 <mat-card>
   <mat-card-title>Add movie<span *ngIf="title">: {{ title }}</span></mat-card-title>
   <mat-card-content>
-    <form (ngSubmit)="onSubmit()">
+    <form #movieAddForm="ngForm" (ngSubmit)="onSubmit()">
       <label for="title">Title</label>
-      <input type="text" name="title" [(ngModel)]="title">
+      <input
+        type="text"
+        name="title"
+        [(ngModel)]="title"
+        required
+        minlength="2"
+        #titleControl="ngModel"
+      >
       <label for="director">Director</label>
-      <input type="text" name="director" [(ngModel)]="director">
-      <button type="submit">Submit</button>
+      <input type="text" name="director" [(ngModel)]="director" required>
+      <button [disabled]="!movieAddForm.form.valid" type="submit">Submit</button>
     </form>
     <p *ngIf="isCreated">Movie created</p>
+    <p *ngIf="titleControl.errors?.required">Title is required</p>
+    <p *ngIf="titleControl.errors?.minlength">Title must be at least 2 characters long</p>
   </mat-card-content>
 </mat-card>
