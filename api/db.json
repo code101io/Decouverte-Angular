@@ -25,5 +25,40 @@
       "title": "Kong",
       "director": "Phil Jackson"
     }
+  ],
+  "directors": [
+    {
+      "id": "1",
+      "name": "Christopher Nolan",
+      "movies": [
+        "Interstellar",
+        "Inception"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Todd Phillips",
+      "movies": [
+        "Joker"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Ryan Coogler",
+      "movies": [
+        "Black Panther"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Phil Jackson",
+      "movies": [
+        "Kong"
+      ]
+    },
+    {
+      "id": "dipV7n1",
+      "name": "James Cameron"
+    }
   ]
 }

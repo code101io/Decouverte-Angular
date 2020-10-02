@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MovieComponent } from './list/movie/movie.component';
 import { MatCardModule } from '@angular/material/card';
+import { DirectorComponent } from './list/director/director.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
     ListComponent,
     MovieHighlightDirective,
     FavoriteDirectorPipe,
-    MovieComponent
+    MovieComponent,
+    DirectorComponent
   ],
   imports: [
     CommonModule,

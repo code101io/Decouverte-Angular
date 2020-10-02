@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-title>Add director<span *ngIf="name">: {{ name }}</span></mat-card-title>
+  <mat-card-content>
+    <form #directorAddForm="ngForm" (ngSubmit)="onSubmit()">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="name"
+        required
+        minlength="2"
+        #nameControl="ngModel"
+      >
+      <button [disabled]="!directorAddForm.form.valid" type="submit">Submit</button>
+    </form>
+    <p *ngIf="isCreated">Director created</p>
+    <p *ngIf="nameControl.errors?.required">Name is required</p>
+    <p *ngIf="nameControl.errors?.minlength">Name must be at least 2 characters long</p>
+  </mat-card-content>
+</mat-card>

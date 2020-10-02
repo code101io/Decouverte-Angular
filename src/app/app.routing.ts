@@ -1,4 +1,3 @@
-import { HomepageViewComponent } from './homepage-view/homepage-view.component';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -9,5 +8,9 @@ export const routes: Routes = [
   {
     path: 'movie',
     loadChildren: () => import('./movie/movie.module').then(m => m.MovieModule)
+  },
+  {
+    path: 'director',
+    loadChildren: () => import('./director/director.module').then(m => m.DirectorModule)
   }
 ];

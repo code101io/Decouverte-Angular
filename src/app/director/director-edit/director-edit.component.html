@@ -1,0 +1,13 @@
+<mat-card *ngIf="director">
+  <mat-card-title>Edit director</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="directorForm" (ngSubmit)="onSubmit()">
+      <label for="name">Name</label>
+      <input type="text" name="name" formControlName="name">
+      <button [disabled]="!directorForm.valid" type="submit">Edit</button>
+    </form>
+    <p *ngIf="isUpdated">Director updated</p>
+    <p *ngIf="directorForm.get('name').errors?.required">Name is required</p>
+    <p *ngIf="directorForm.get('name').errors?.minlength">Name must be at least 2 characters long</p>
+  </mat-card-content>
+</mat-card>
