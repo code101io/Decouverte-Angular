@@ -1,8 +1,10 @@
+import { MergeService } from './../../services/merge.service';
 import { DirectorService } from './../../services/director.service';
 import { Director } from './../../interfaces/director';
 import { Movie } from './../../interfaces/movie';
 import { MovieService } from './../../services/movie.service';
 import { Component, OnInit } from '@angular/core';
+import { combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-list',
@@ -16,16 +18,17 @@ export class ListComponent implements OnInit {
 
   constructor(
     private readonly movieService: MovieService,
-    private readonly directorService: DirectorService
+    private readonly directorService: DirectorService,
+    private readonly mergeService: MergeService
   ) { }
 
   ngOnInit(): void {
-    this.movieService.getMovies().subscribe((movies: Movie[]) => {
-      this.movies = movies;
-    });
-
-    this.directorService.getDirectors().subscribe((directors: Director[]) => {
-      this.directors = directors;
+    combineLatest([
+      this.movieService.getMovies(),
+      this.directorService.getDirectors()
+    ]).subscribe(([movies, directors]: [Movie[], Director[]]) => {
+      this.movies = this.mergeService.findDirectorByMovie(movies, directors);
+      this.directors = this.mergeService.findMoviesByDirector(movies, directors);
     });
   }
 

@@ -3,27 +3,27 @@
     {
       "id": "1",
       "title": "Interstellar",
-      "director": "Christopher Nolan"
+      "director": "1"
     },
     {
       "id": "2",
       "title": "Joker",
-      "director": "Todd Phillips"
+      "director": "2"
     },
     {
       "id": "3",
       "title": "Black Panther",
-      "director": "Ryan Coogler"
+      "director": "3"
     },
     {
       "id": "4",
       "title": "Inception",
-      "director": "Christopher Nolan"
+      "director": "1"
     },
     {
       "id": "xfz931v",
       "title": "Kong",
-      "director": "Phil Jackson"
+      "director": "4"
     }
   ],
   "directors": [
@@ -31,29 +31,29 @@
       "id": "1",
       "name": "Christopher Nolan",
       "movies": [
-        "Interstellar",
-        "Inception"
+        "1",
+        "4"
       ]
     },
     {
       "id": "2",
       "name": "Todd Phillips",
       "movies": [
-        "Joker"
+        "2"
       ]
     },
     {
       "id": "3",
       "name": "Ryan Coogler",
       "movies": [
-        "Black Panther"
+        "3"
       ]
     },
     {
       "id": "4",
       "name": "Phil Jackson",
       "movies": [
-        "Kong"
+        "xfz931v"
       ]
     },
     {
