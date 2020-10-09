@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display first h1 title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('DBMovies app is running!');
+    expect(page.getHeadingText()).toEqual("Movie's list");
   });
 
   afterEach(async () => {
