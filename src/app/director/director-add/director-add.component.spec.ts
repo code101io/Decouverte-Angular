@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { DirectorAddComponent } from './director-add.component';
 
@@ -8,6 +10,7 @@ describe('DirectorAddComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule, FormsModule],
       declarations: [ DirectorAddComponent ]
     })
     .compileComponents();

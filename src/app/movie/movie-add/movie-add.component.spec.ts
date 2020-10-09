@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { MovieAddComponent } from './movie-add.component';
 
@@ -8,6 +10,7 @@ describe('MovieAddComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule, FormsModule],
       declarations: [ MovieAddComponent ]
     })
     .compileComponents();

@@ -16,6 +16,11 @@ describe('DirectorComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DirectorComponent);
     component = fixture.componentInstance;
+    component.model = {
+      id: "1",
+      name: "name",
+      movies: ["1"]
+    };
     fixture.detectChanges();
   });
 

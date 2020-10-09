@@ -1,3 +1,4 @@
+import { FavoriteDirectorPipe } from './../../../shared/favorite-director.pipe';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MovieComponent } from './movie.component';
@@ -8,7 +9,7 @@ describe('MovieComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieComponent ]
+      declarations: [FavoriteDirectorPipe, MovieComponent ]
     })
     .compileComponents();
   }));
@@ -16,6 +17,11 @@ describe('MovieComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MovieComponent);
     component = fixture.componentInstance;
+    component.model = {
+      id: "1",
+      title: "title",
+      director: "1"
+    };
     fixture.detectChanges();
   });
 
