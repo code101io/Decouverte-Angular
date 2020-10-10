@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "dbmovies-bdd7d": {
+      "hosting": {
+        "DBMovies": [
+          "dbmovies-bdd7d"
+        ]
+      }
+    }
+  }
+}
